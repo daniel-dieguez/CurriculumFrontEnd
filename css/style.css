@@ -1,0 +1,350 @@
+*{
+    
+    box-sizing: border-box;
+
+}
+
+html{
+    scroll-behavior: smooth ;
+} /*cambio lento de pestañas*/
+
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.btn-outline-primary{
+    margin: 10px 200px;
+}
+
+/*Menu principal de arriba */
+header {
+    background-image: linear-gradient(to right, #434343 0%, black 100%);
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+  }
+
+  nav {
+    float: right; /* Desplazamos el nav hacia la izquierda */
+  }
+
+  nav ul {
+    list-style: none;
+    overflow: hidden; /* Limpiamos errores de float */
+  }
+  nav ul li { /*letra de menu*/
+    float: left;
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    margin: 10px;
+  }
+
+  nav ul li a {
+    display: block; /* Convertimos los elementos a en elementos bloque para manipular el padding */
+    padding: 8px;
+    color: rgb(224, 224, 224);
+    text-decoration: none;
+  }
+
+  nav ul li a:hover{
+    color:rgb(193, 155, 85);
+   
+  }
+
+  /*teriman*/
+
+  /*menus de tarjetitas*/
+
+  #sec2 ul li{
+    text-align: left;
+
+  }
+
+  /*inicia  palabras o textos*/
+
+section{
+    height: 820px;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0;
+    align-items: center; /*para ponerlo centrado*/
+}
+
+/*titulos H2*/
+
+#sec1 h2{
+    color: aliceblue;
+    font-size: 70px;
+    text-align: center;
+
+    
+}
+#dieguez{
+    color: #ff0844;
+}
+
+#sec2 h2{
+    color: #ef9b8c;
+    font-size: 70px;
+    height: 40%;
+    float: center;
+    text-align: center;
+    
+
+}
+
+#sec3 h2{
+    color:#0c0e0c;
+    text-align: center;
+    font-size: 70px;    
+}
+
+#sec4 h2{
+    color: #8ccbef;
+}
+
+#segundoplano {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+     color: rgb(210, 250, 223);
+    font-size: 75px;
+    float: center;
+    width: 50px 10px; /*IMPORTANTE VER*/
+    margin: 10px;
+    padding: 50px;
+    height: 50% ;
+
+  }
+  
+#segundoplano:hover{
+    color: rgb(236, 236, 22);
+  }
+  .row{
+    float: center;
+    text-align: center;
+  }
+
+  
+
+/*h4 de titulo*/
+section h4{
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 5px;
+    padding: 10px;
+    float: center;
+}
+
+#sec1 h4{
+    color: aqua;
+    float: center;
+    text-align: center;
+    padding: 10px;
+    font-size: 30px;
+   }
+
+/*DIFUMINACION*/
+#sec1 h2, #sec1 h4{
+  padding: 1px ;
+                      /*que no se vaya al tope si no solo un cuadro*/
+  backdrop-filter: blur(3px);
+  margin: 1px 400px ; /*segundo px para acceder a la distancia de los cuadros*/
+
+}
+
+/*letras en general */
+section p{ 
+    font-weight: 300;
+    margin-bottom: 15px ;
+    padding: 10px;
+}
+#sec1 p,#sec4 p{
+    color: #deecdd;
+}
+
+#conjunto { /*Botones de descarga Cv y siguiente*/
+    float: center;
+    display: inline;
+}
+
+#tarjetas{              /*poner tarjetas al centro*/
+    position: center;
+    margin: 1px;
+}
+
+#botonlenguaje{ /*boton de conjunto de imagenes siguiente*/
+    margin: 50px;
+
+}
+
+/*Imagenes */
+#img-dan{
+    width: 300px;
+    border-radius: 50%;
+    float: left;
+    display: block;
+    margin: 10px;
+    border: 5px solid #151f3d;
+    height: 60%;
+    -webkit-transition: 1s linear;
+    transition: 5s linear;
+}
+
+#img-dan:hover{
+-webkit-transform:scale(0.9); 
+-webkit-box-shadow: 10px 10px 14px 2px rgba(199, 180, 180, 0.47);
+        box-shadow: 10px 10px 14px 2px rgba(185, 179, 179, 0.47);
+
+}
+
+#flechas{
+    animation-duration: 3s;
+    animation-name: slidein;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+table td{ /*Imagenes de lenguajes*/
+    margin: 50px;
+    padding: 45px;
+    -webkit-transition: 1s linear;
+  transition:1s linear;
+  
+  }
+table td:hover{
+    -webkit-transform:scale(1.8); 
+   
+}
+
+/*formulario adecuado */
+
+#form{
+    width: 300px;
+    margin: 20vh auto 0 auto;
+    padding: 20px;
+    background-color: #deecdd;
+    border-radius: 4px;
+    font-size: 20px;
+}
+
+#form h2{
+    text-align: center;   
+}
+
+.input-control{
+    display: flex;
+    flex-direction: column;
+}
+.input-control label{
+    font-size: 20px;
+}
+.input-control input{
+    border: 2px solid #f0c5bd;
+    border-radius: 4px;
+    display: block;
+    font-size: 16px;
+    padding: 10px;
+    width: 100%;
+    margin: 5px;
+}
+
+.input-control input:focus{
+    outline: 0;
+}
+
+/*fondos*/
+
+section:nth-child(1){ /*seleccionador de secciones de colores*/
+    background-image: linear-gradient(to top, #c1dfc4 0%, #deecdd 100%);
+
+}
+
+
+section:nth-child(2){ /*seleccionador de secciones de colores*/
+    
+    background-image: 
+    url(https://www.muycomputer.com/wp-content/uploads/2019/01/lenguaje-de-programaci%C3%B3n.jpg);  
+    background-size: 900px 800px;
+    
+    
+
+}
+
+
+section:nth-child(3){ /*seleccionador de secciones de colores*/
+    background-image: linear-gradient(to right, #434343 0%, black 100%);
+
+}
+
+section:nth-child(4){ /*seleccionador de secciones de colores*/
+    
+    background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
+
+}
+section:nth-child(5){ /*seleccionador de secciones de colores*/
+    background-image: linear-gradient(to right, #434343 0%, black 100%);
+
+}
+section:nth-child(6){ /*seleccionador de secciones de colores*/
+    background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
+
+}
+
+/*totito*/
+#winner{
+    text-align: center;
+    font-size: 2rem;
+
+  }
+  #tableta button{
+    width: 100px;
+    height: 100px;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  #tableta{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    width: fit-content;
+    margin: auto;
+    padding: 10px;
+
+  }
+
+
+
+
+
+
+
+/*para acomodar telefono*/
+
+@media  screen and (max-width:390px) {
+    section{
+        flex-direction: column-reverse; /*poner un elevento arriba de otro*/ /*column: solo texto primero, reverse: imagen primero y despues txte*/
+        /*justify-content: center;*/
+
+    }
+
+    
+    #imagenes{
+        display: flexbox;
+        height: 10%;
+        width: 10%;
+        
+    }
+
+        
+    
+}
+
+@keyframes slidein {
+    from {
+      
+      width: 3%
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 10%;
+    }
+  }
