@@ -1,26 +1,25 @@
 
-/*function mostrar (){
 
-
-  swal({
-    title: "Mensaje exitoso",
-    text: "Mensaje enviado",
-    icon: "success",
-    button: "close",
-  });
-}*/
   
 
 var btnEnviar = document.getElementById('btnform');
 
 
-btnEnviar.addEventListener('click', function(){
+btnEnviar.addEventListener('click', () =>{
   event.preventDefault()
+  
+  
   var nombre = document.getElementById('name');
   var email = document.getElementById ('email');
+
  
+
+  const nombres = nombre.value.length;
+  const emails = email.value.length;
+  const todo = nombres + emails;
   
-  if(nombre.value.length < 3, email.value.length <2){
+  if(todo <= 5){
+    console.log("Error");    
     Swal.fire({
       icon: 'error',
       title: 'Nombre o Correo mal escrito',
@@ -28,6 +27,7 @@ btnEnviar.addEventListener('click', function(){
     })
 
 } else {
+  console.log(nombre.value + email.value);
   Swal.fire({
     icon: 'success',
     title: 'Mensaje enviado ',
@@ -35,6 +35,7 @@ btnEnviar.addEventListener('click', function(){
   })
 }
 
+form.reset();
 });
 
 var btnreiniciar = document.getElementById("reiniciar");
